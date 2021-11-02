@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Nanum+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo&family=Montserrat&family=Nanum+Gothic&display=swap');
+
 
 body {
     background-color: rgb(41, 60, 78);
@@ -29,7 +32,7 @@ h3 {
 li {
     color: white;
     margin-left: 30px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nanum Gothic', sans-serif;
 }
 
 
@@ -47,11 +50,11 @@ main {
 p {
     color: rgb(252, 185, 185);
     margin-left: 30px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nanum Gothic', sans-serif;
 }
 
 a {
     color: rgb(132, 191, 214);
     margin-left: 30px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Cairo', sans-serif;
 }
