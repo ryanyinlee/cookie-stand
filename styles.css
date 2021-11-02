@@ -58,3 +58,12 @@ a {
     margin-left: 30px;
     font-family: 'Cairo', sans-serif;
 }
+
+table, td, th {
+    border: 1px solid rgb(69, 123, 173);
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }

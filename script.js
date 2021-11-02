@@ -1,83 +1,30 @@
 'use strict';
 
-var i;
-
-
 function getRandomCust(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-// console.log(getRandomCust(1,10));
-
-
-
-let seattleShop = {
-    location: 'Seattle',
-    minHourlyCust: 23,
-    maxHourlyCust: 65,
-    cookieRate: 6.3, // avg cookies per customer/hr
-    avg: 0, // placeholder
-    
-    getAverage: function () {
-        this.avg = this.cookieRate * getRandomCust(this.minHourlyCust, this.maxHourlyCust);
-    },
-
-
+function Cookieshop(cityName, minHourlyCust, maxHourlyCust, cookiesPerCust) {
+    this.location = cityName;
+    this.minHourlyCust = minHourlyCust;
+    this.maxHourlyCust = maxHourlyCust;
+    this.cookiesPerCust = cookiesPerCust;
+    this.average = 0;
+    this.getAverage();
 }
 
+Cookieshop.prototype.getAverage = function () {
+    const avg = this.cookieRate * getRandomCust(this.minHourlyCust, this.maxHourlyCust);
+    return Math.ceil(avg);
+},
 
-let tokyoShop = {
-    location: 'Tokyo',
-    minHourlyCust: 3,
-    maxHourlyCust: 24,
-    cookieRate: 1.2,
-    avg: 0,
 
-    getAverage: function () {
-        this.avg = this.cookieRate * getRandomCust(this.minHourlyCust, this.maxHourlyCust);
-    },
+const seattle = new Cookieshop('Seattle', 23, 65, 6.3, 0);
+const tokyo = new Cookieshop('Tokyo', 3, 24, 1.2, 0);
+const dubai = new Cookieshop('Dubai', 11, 38, 3.7, 0);
+const paris = new Cookieshop('Paris', 20, 38, 2.3, 0);
+const lima = new Cookieshop('Lima', 2, 16, 4.6, 0);
 
-}
-
-let dubaiShop = {
-    location: 'Dubai',
-    minHourlyCust: 11,
-    maxHourlyCust: 38,
-    cookieRate: 3.7,
-    avg: 0,
-
-    getAverage: function () {
-        this.avg = this.cookieRate * getRandomCust(this.minHourlyCust, this.maxHourlyCust);
-    },
-
-}
-
-let parisShop = {
-    location: 'Paris',
-    minHourlyCust: 20,
-    maxHourlyCust: 38,
-    cookieRate: 2.3,
-    avg: 0,
-
-    getAverage: function () {
-        this.avg = this.cookieRate * getRandomCust(this.minHourlyCust, this.maxHourlyCust);
-    },
-
-}
-
-let limaShop = {
-    location: 'Lima',
-    minHourlyCust: 2,
-    maxHourlyCust: 16,
-    cookieRate: 4.6,
-    avgPerHour: [],
-
-    getAverage: function () {
-        const avg = this.cookieRate * getRandomCust(this.minHourlyCust, this.maxHourlyCust);
-        return Math.ceil(avg);
-    },
-
-}
 // Calculate and store average sales per hour for this shop 
 // Get total sales
 
@@ -85,12 +32,38 @@ let limaShop = {
 
 let hours = ['6AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM']; // from emily
 
-for (i = 0; i < hours.length; i++) {
+for (let i = 0; i < hours.length; i++) {
     limaShop.avgPerHour[i] = limaShop.getAverage();
     
 
 }
 console.log(limaShop.avgPerHour);
+
+// from Class 07, but typed out
+const tableElem = document.createElement('table');
+articleElem.appendChild(tableElem);
+
+const topRow = document.createElement('tr'); // col names
+tableElem.appendChild(topRow);
+
+const location = document.createElement('th');
+headerRowElem.appendChild(location);
+location.textContent = 'Location';
+
+const location = document.createElement('th');
+headerRowElem.appendChild(location);
+location.textContent = 'Min / Cust';
+
+const location = document.createElement('th');
+headerRowElem.appendChild(location);
+location.textContent = 'Max / Cust';
+
+const location = document.createElement('th');
+headerRowElem.appendChild(location);
+location.textContent = 'Avg Cookie / Sale';
+
+const infoRow = document.createElement('tr'); // values within
+tableElem.appendChild(infoRow);
 
 
 
