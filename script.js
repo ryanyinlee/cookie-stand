@@ -11,12 +11,13 @@ function getRandomCust(min, max) {
 
 
 
-let cookieShop = {
+let seattleShop = {
     location: 'Seattle',
     minHourlyCust: 23,
     maxHourlyCust: 65,
-    cookieRate: 6.3,
-    avg: 0,
+    cookieRate: 6.3, // avg cookies per customer/hr
+    avg: 0, // placeholder
+    
     getAverage: function () {
         this.avg = this.cookieRate * getRandomCust(this.minHourlyCust, this.maxHourlyCust);
     },
@@ -25,61 +26,73 @@ let cookieShop = {
 }
 
 
-let cookieShop1 = {
+let tokyoShop = {
     location: 'Tokyo',
     minHourlyCust: 3,
     maxHourlyCust: 24,
     cookieRate: 1.2,
     avg: 0,
+
     getAverage: function () {
         this.avg = this.cookieRate * getRandomCust(this.minHourlyCust, this.maxHourlyCust);
     },
 
 }
 
-let cookieShop2 = {
+let dubaiShop = {
     location: 'Dubai',
     minHourlyCust: 11,
     maxHourlyCust: 38,
     cookieRate: 3.7,
     avg: 0,
+
     getAverage: function () {
         this.avg = this.cookieRate * getRandomCust(this.minHourlyCust, this.maxHourlyCust);
     },
 
 }
 
-let cookieShop3 = {
+let parisShop = {
     location: 'Paris',
     minHourlyCust: 20,
     maxHourlyCust: 38,
     cookieRate: 2.3,
     avg: 0,
+
     getAverage: function () {
         this.avg = this.cookieRate * getRandomCust(this.minHourlyCust, this.maxHourlyCust);
     },
 
 }
 
-let cookieShop4 = {
+let limaShop = {
     location: 'Lima',
     minHourlyCust: 2,
     maxHourlyCust: 16,
     cookieRate: 4.6,
-    avg: 0,
+    avgPerHour: [],
+
     getAverage: function () {
-        this.avg = this.cookieRate * getRandomCust(this.minHourlyCust, this.maxHourlyCust);
+        const avg = this.cookieRate * getRandomCust(this.minHourlyCust, this.maxHourlyCust);
+        return Math.ceil(avg);
     },
 
 }
+// Calculate and store average sales per hour for this shop 
+// Get total sales
 
-for (i = 0; i < 15; i++) {
-    cookieShop.getAverage();
+// Array with hours
+
+let hours = ['6AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM']; // from emily
+
+for (i = 0; i < hours.length; i++) {
+    limaShop.avgPerHour[i] = limaShop.getAverage();
+    
+
 }
+console.log(limaShop.avgPerHour);
 
 
-
-// console.log(this.seattle.getAverage());
 
 let cookieContainer = document.getElementById('cookieShops');
 
