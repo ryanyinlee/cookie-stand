@@ -84,4 +84,9 @@ table, td, th {
     font-family: 'Cairo', sans-serif;
   }
 
-  
+  #mercury {
+    color: rgb(192, 192, 192);
+    margin-left: 30px;
+    font-family: 'Cairo', sans-serif;
+    font-size: xx-small;
+  }
