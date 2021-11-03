@@ -17,14 +17,21 @@ h1 {
 
 h2 {
     color:salmon;
-    font-size: 32pt;
+    font-size: 24pt;
     margin-left: 30px;
     font-family: 'Montserrat', sans-serif;
 }
 
 h3 {
     color:salmon;
-    font-size: 32pt;
+    font-size: 18.72pt;
+    margin-left: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h4 {
+    color:salmon;
+    font-size: 16pt;
     margin-left: 30px;
     font-family: 'Montserrat', sans-serif;
 }
@@ -61,9 +68,20 @@ a {
 
 table, td, th {
     border: 1px solid rgb(69, 123, 173);
+    color: white;
+    font-family: 'Cairo', sans-serif;
   }
   
   table {
     width: 100%;
     border-collapse: collapse;
+
   }
+
+  footer {
+    color: rgb(132, 191, 214);
+    margin-left: 30px;
+    font-family: 'Cairo', sans-serif;
+  }
+
+  
