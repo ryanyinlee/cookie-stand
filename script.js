@@ -39,6 +39,7 @@ const lima = new Cookieshop('Lima', 2, 16, 4.6, 0);
 
 
 let tempArray = 0;
+
 Cookieshop.prototype.getHourlySales = function () {
     for (let i = 0; i < hours.length; i++) {
     let tempArray = getAverage();
