@@ -53,12 +53,6 @@ const paris = new Cookieshop('Paris', 20, 38, 2.3);
 const lima = new Cookieshop('Lima', 2, 16, 4.6);
 
 
-
-
-
-
-
-
 // Array with hours
 
 
