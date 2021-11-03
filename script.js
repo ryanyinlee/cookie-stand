@@ -18,8 +18,7 @@ function Cookieshop(cityName, minHourlyCust, maxHourlyCust, cookiesPerCust) {
     this.getTotalSales();
 }
 
-// 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 
-// Putting these zeroes here for diagnostic reasons.
+
 
 Cookieshop.prototype.getAverage = function () {
     const average = (this.cookiesPerCust * getRandomCust(this.minHourlyCust, this.maxHourlyCust));
