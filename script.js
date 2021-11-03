@@ -40,12 +40,12 @@ const lima = new Cookieshop('Lima', 2, 16, 4.6, 0);
 
 let tempArray = 0;
 
-Cookieshop.prototype.getHourlySales = function () {
-    for (let i = 0; i < hours.length; i++) {
-    let tempArray = getAverage();
-    const avgHourlyArray = avgPerHour.push(tempArray);
-}
-}
+// Cookieshop.prototype.getHourlySales = function () {
+//     for (let i = 0; i < hours.length; i++) {
+//     let tempArray = getAverage();
+//     const avgHourlyArray = avgPerHour.push(tempArray);
+// }
+// }
 
 // Array with hours
 
@@ -126,7 +126,7 @@ cookieContainerElem.appendChild(articleElem);
   
       const minHourlyCustHeading = document.createElement('th');
       topRow.appendChild(minHourlyCustHeading);
-      minHourlyCustHeading.textContent = 'Min / Cust';
+      minHourlyCustHeading.textContent = hours[0];
   
       const maxHourlyCustHeading = document.createElement('th');
       topRow.appendChild(maxHourlyCustHeading);
@@ -168,7 +168,10 @@ Cookieshop.prototype.render = function () {
 
 }
 
-console.log(seattle.getHourlySales());
+
+
+
+// console.log(seattle.getHourlySales());
 seattle.render();
 
 tokyo.render();
