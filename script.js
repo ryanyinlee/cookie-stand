@@ -42,7 +42,7 @@ Cookieshop.prototype.getTotalSales = function () {
     }
     return outputTotal;
 }
-
+// Function added to bottom row.
 function renderFooterRow() {
     // Add up hourly total
 
