@@ -207,6 +207,13 @@ cookieContainerElem.appendChild(articleElem);
     totalCookies.textContent = this.getTotalSales();
     console.log(this.getTotalSales());
 
+    const dataRowElem = document.createElement('tr'); 
+    tableElem.appendChild(dataRowElem);
+
+    const cityName = document.createElement('td'); //1
+    dataRowElem.appendChild(cityName);
+    cityName.textContent = this.location;
+
 }
 
 
