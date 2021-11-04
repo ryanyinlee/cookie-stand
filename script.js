@@ -54,64 +54,6 @@ const lima = new Cookieshop('Lima', 2, 16, 4.6);
 
 // Array with hours
 
-
-// console.log(seattle.getHourlySales());
-
-// , totalTokyo, totalDubai, totalParis, totalLima
-
-// Get total sales
-// function seattleTotal()  {
-// for (let i = 0; i < hours.length; i++) {
-//     let totalSeattle = 0;
-//     totalSeattle = totalSeattle + seattle.avgPerHour[i];
-    
-// }
-
-// }
-// return totalSeattle;
-//console.log(seattle.getHourlySales());
-
-// console.log(seattle.avgPerHour);
-
-// function tokyoTotal() {
-
-// for (let i = 0; i < hours.length; i++) {
-//     tokyo.avgPerHour[i] = tokyo.getAverage();
-//     totalTokyo = totalTokyo + tokyo.avgPerHour[i];
-
-// }
-// }
-
-// function dubaiTotal(){
-
-// for (let i = 0; i < hours.length; i++) {
-//     dubai.avgPerHour[i] = dubai.getAverage();
-//     totalDubai = totalDubai + dubai.avgPerHour[i];
-
-// }
-// }
-
-// function parisTotal(){
-
-// for (let i = 0; i < hours.length; i++) {
-//     paris.avgPerHour[i] = paris.getAverage();
-//     totalDubai = totalDubai + paris.avgPerHour[i];
-
-// }
-// }
-
-
-// function limaTotal() {
-//     for (let i = 0; i < hours.length; i++) {
-//         lima.avgPerHour[i] = lima.getAverage();
-//         totalDubai = totalDubai + lima.avgPerHour[i];
-        
-//     }
-// }
-
-
-
-// console.log(seattleTotal());
 const cookieContainerElem = document.getElementById('cookieShops');
 
 const articleElem = document.createElement('article'); // create article in HTML
