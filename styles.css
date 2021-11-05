@@ -90,3 +90,22 @@ table, td, th {
     font-family: 'Cairo', sans-serif;
     font-size: xx-small;
   }
+
+  #entryForm {
+    
+    color: white;
+    font-family: 'Cairo', sans-serif;
+    
+
+  }
+
+fieldset {
+    margin-left: 3rem;
+    min-width:auto;
+    width: 1085px;
+    
+}
+
+/* .button1 {
+    margin-left: 64px;
+} */
