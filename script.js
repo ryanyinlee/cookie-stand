@@ -168,7 +168,7 @@ Cookieshop.prototype.render = function () {
 
 }
 
-let hourlyTotals = [];
+let hourlyTotalsArray = [];
 function getTheHourlySalesTotal() {
     // outer (aka slow) loop is the hours
     let hourlySalesTotal = 0;
@@ -176,7 +176,7 @@ function getTheHourlySalesTotal() {
         // now we're in the hourly slot
 
         
-
+        hourlyTotalsArray = [];
 
         let shops = [seattle, tokyo, dubai, paris, lima];
         // inner loop is over the shops
@@ -187,10 +187,13 @@ function getTheHourlySalesTotal() {
             const hourlySalesForCurrentShop = currentShop.cookiesSoldEachHour[hourIndex];
 
             hourlySalesTotal = hourlySalesTotal + hourlySalesForCurrentShop;
+            
+            console.log(hourIndex, hourlySalesTotal);
         }
-
+            
         
-        hourlyTotals.push(hourlySalesTotal);
+        
+        hourlyTotalsArray.push(hourlySalesTotal);
 
     }
     return hourlySalesTotal;
@@ -228,7 +231,7 @@ function renderFooterRow() {
 
         const thElem = document.createElement('th');
         tableRow.appendChild(thElem);
-        thElem.textContent =  hourlyTotals[i];
+        thElem.textContent =  hourlyTotalsArray[i];
         
     }
 
